@@ -1,17 +1,14 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
     <!-- AOS CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>CoffeeZone</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -24,8 +21,6 @@
             overflow-x: hidden;
         }
 
-        
-        /* Animasi Scroll */
         .animate-on-scroll {
             opacity: 0;
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -76,7 +71,6 @@
             padding: 0 2rem;
         }
 
-        /* Navbar sticky and responsive adjustments */
         .navbar {
             transition: background-color 0.3s, box-shadow 0.3s;
 
@@ -114,50 +108,67 @@
     }
 
     .about-us {
-    height: 90vh; /* Adjust height to auto for flexibility */
-    padding: 2rem 1rem; /* Add padding to ensure content doesn’t touch edges */
+    height: 90vh;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
 .about-us h2 {
-    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    font-size: 2.5rem;
 }
 
 .about-us p {
-    font-size: 1.25rem; /* Adjust font size for smaller screens */
+    font-size: 1.25rem;
 }
 
 @media (max-width: 768px) {
     .about-us {
-    height: auto; /* Adjust height to auto for flexibility */
-    padding: 2rem 1rem; /* Add padding to ensure content doesn’t touch edges */
+    height: auto;
+    padding: 2rem 1rem;
     text-align: center;
 }
     .about-us h2 {
-        font-size: 2rem; /* Smaller font size for smaller screens */
+        font-size: 2rem;
     }
 
     .about-us p {
-        font-size: 1rem; /* Smaller font size for smaller screens */
+        font-size: 1rem;
     }
 }
+
+.review-card {
+            background-color: #f8f9fa;
+            border: none;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .rating {
+            color: #f1c40f;
+        }
 
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="#">CoffeeZone</a>
-
-            <!-- Toggler/collapsibe Button for mobile view -->
+        
+            <!-- Toggler/collapsible Button for mobile view -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+        
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
@@ -170,28 +181,33 @@
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#fasilitas">Fasilitas</a>
                     </li>
+                    <!-- Order Now Button for Mobile -->
+                    <li class="nav-item d-lg-none">
+                        <a href="#order" class="nav-link px-3">Order Now</a>
+                    </li>
                 </ul>
             </div>
-
-            <!-- Order Button -->
+        
+            <!-- Order Now Button for Desktop -->
             <div class="d-none d-lg-block">
                 <a href="#order" class="btn btn-secondary">Order Now</a>
             </div>
         </div>
     </nav>
+    
+    
     <!-- Akhir Nav -->
 
-    <!-- Fullscreen Jumbotron -->
-    <div class="jumbotron">
+    <!-- Jumbotron Awal -->
+    <div class="jumbotron" id="home">
         <div class="jumbotron-content">
             <h1 class="display-1" data-aos="fade-up" data-aos-anchor-placement="center-bottom">Selamat Datang di CoffeeZone</h1>
             <p class="lead" data-aos="fade-up" data-aos-anchor-placement="center-bottom">Nikmati kopi terbaik dengan suasana nyaman dan tenang di CoffeeZone.</p>
         </div>
-       
     </div>
+    <!-- Jumbotron Akhir -->
 
-
-    <!-- About Us Section -->
+    <!-- About Us Awal-->
     <section id="about" class="about-us bg-light bg-transparent">
         
         <div class="container" data-aos="fade-up">
@@ -199,8 +215,9 @@
             <p class="lead fs-4">CoffeeZone adalah kafe yang berkomitmen untuk menghadirkan pengalaman menikmati kopi yang sempurna. Kami menawarkan berbagai macam kopi yang diseduh dengan biji kopi berkualitas tinggi, dalam suasana yang hangat dan ramah. Dengan interior yang dirancang untuk memberikan kenyamanan maksimal, CoffeeZone adalah tempat yang sempurna untuk bersantai, bekerja, atau berkumpul dengan teman-teman.</p>
         </div>
     </section>
+    <!-- About Us Akhir-->
 
-<!-- Best Seller Section -->
+<!-- Best Seller Awal -->
 <section id="best-sellers" class="py-5" style="height: 100%; width: 100vw; background-color: #201E1F;">
     <div class="container">
         <h2 class="text-center mb-5 display-4" style="color: white;">━ Best Seller ━</h2>
@@ -275,33 +292,110 @@
         </div>
     </div>
 </section>
+<!-- Best Seller Akhir -->
 
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="padding: 10vh; ">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="review-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/profile.jpg" alt="Profile 1" class="profile-img me-3">
+                        <div>
+                            <h5 class="mb-0">John Doe</h5>
+                            <small class="text-muted">2024-08-24</small>
+                        </div>
+                    </div>
+                    <div class="rating mb-3">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="mb-0">The best coffee I've ever had! The atmosphere is perfect for working or relaxing.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="review-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/profile.jpg" alt="Profile 2" class="profile-img me-3">
+                        <div>
+                            <h5 class="mb-0">Jane Smith</h5>
+                            <small class="text-muted">2024-08-23</small>
+                        </div>
+                    </div>
+                    <div class="rating mb-3">
+                        <span>⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="mb-0">Great coffee and friendly staff. A bit crowded during peak hours, but worth the wait!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="review-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/profile.jpg" alt="Profile 3" class="profile-img me-3">
+                        <div>
+                            <h5 class="mb-0">Mike Johnson</h5>
+                            <small class="text-muted">2024-08-22</small>
+                        </div>
+                    </div>
+                    <div class="rating mb-3">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="mb-0">I love coming here in the mornings. The espresso is always on point.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<footer class="py-5" style="background-color: #201E1F;">
+    <div class="container text-center">
+       <a href="#home" class="text-decoration-none"><p class="display-4 mb-5  text-white">CoffeeZone</p></a> 
+        <small class="text-white-50 ">&copy; Copyright by Astera Development. all rights reserved.</small>
+    </div>
+</footer>
 
     <!-- Bootstrap Javascript -->
     <script src="js/bootstrap.js"></script>
-
+    <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Popper Javascript -->
     <script src="js/popper.min.js"></script>
-
     <!-- AOS JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
 
-        // Close navbar on link click (for mobile)
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbarToggler = document.querySelector('.navbar-toggler');
-            const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+    </script>
+    <script>
+    // Close navbar on link click (for mobile)
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
 
-            document.querySelectorAll('.nav-link').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    if (navbarToggler && navbarCollapse.classList.contains('show')) {
-                        navbarToggler.click();
-                    }
-                });
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (navbarToggler && navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
             });
         });
-    </script>
+    });
+        </script>
 </body>
-
 </html>
