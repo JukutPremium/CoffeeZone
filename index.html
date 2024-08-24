@@ -112,6 +112,36 @@
     .position-relative:hover .card-img-overlay {
         opacity: 1;
     }
+
+    .about-us {
+    height: 90vh; /* Adjust height to auto for flexibility */
+    padding: 2rem 1rem; /* Add padding to ensure content doesn’t touch edges */
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+}
+
+.about-us p {
+    font-size: 1.25rem; /* Adjust font size for smaller screens */
+}
+
+@media (max-width: 768px) {
+    .about-us {
+    height: auto; /* Adjust height to auto for flexibility */
+    padding: 2rem 1rem; /* Add padding to ensure content doesn’t touch edges */
+    text-align: center;
+}
+    .about-us h2 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    .about-us p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+}
+
     </style>
 </head>
 
@@ -165,7 +195,7 @@
     <section id="about" class="about-us bg-light bg-transparent">
         
         <div class="container" data-aos="fade-up">
-            <h2 class="display-4 pt-5">Tentang CoffeeZone</h2>
+            <h2 class="display-4">Tentang CoffeeZone</h2>
             <p class="lead fs-4">CoffeeZone adalah kafe yang berkomitmen untuk menghadirkan pengalaman menikmati kopi yang sempurna. Kami menawarkan berbagai macam kopi yang diseduh dengan biji kopi berkualitas tinggi, dalam suasana yang hangat dan ramah. Dengan interior yang dirancang untuk memberikan kenyamanan maksimal, CoffeeZone adalah tempat yang sempurna untuk bersantai, bekerja, atau berkumpul dengan teman-teman.</p>
         </div>
     </section>
