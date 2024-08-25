@@ -16,6 +16,11 @@
         * {
             font-family: "Poppins", sans-serif;
         }
+        
+        body.no-scroll {
+    overflow: hidden;
+}
+
 
         body {
             overflow-x: hidden;
@@ -154,10 +159,48 @@
             color: #f1c40f;
         }
 
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-out, visibility 1s ease-out;
+        }
+
+        #preloader-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader-img {
+            width: 100px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+            height: auto;
+        }
+
+        /* Hide preloader after 4 seconds */
+        #preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="preloader-inner">
+            <img src="assets/143.gif" alt="Loading..." class="preloader-img">
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
@@ -195,7 +238,6 @@
         </div>
     </nav>
     
-    
     <!-- Akhir Nav -->
 
     <!-- Jumbotron Awal -->
@@ -209,7 +251,6 @@
 
     <!-- About Us Awal-->
     <section id="about" class="about-us bg-light bg-transparent">
-        
         <div class="container" data-aos="fade-up">
             <h2 class="display-4 fw-medium">Tentang CoffeeZone</h2>
             <p class="lead fs-5">CoffeeZone adalah kafe yang berkomitmen untuk menghadirkan pengalaman menikmati kopi yang sempurna. Kami menawarkan berbagai macam kopi yang diseduh dengan biji kopi berkualitas tinggi, dalam suasana yang hangat dan ramah. Dengan interior yang dirancang untuk memberikan kenyamanan maksimal, CoffeeZone adalah tempat yang sempurna untuk bersantai, bekerja, atau berkumpul dengan teman-teman.</p>
@@ -217,103 +258,100 @@
     </section>
     <!-- About Us Akhir-->
 
-<!-- Best Seller Awal -->
-<section id="best-sellers" class="py-5" style="height: 100%; width: 100vw; background-color: #201E1F;">
-    <div class="container">
-        <h2 class="text-center mb-5 display-4" style="color: white;" data-aos="fade-up">━ Best Seller ━</h2>
-        <p style="color: white;" class="text-center fs-5 mb-5" data-aos="fade-up">Temukan pilihan kopi terbaik kami yang telah menjadi favorit para pelanggan. Setiap minuman dalam menu Best Seller kami dibuat dengan bahan berkualitas tinggi dan penuh cinta, memastikan pengalaman kopi yang tak tertandingi.</p>
+    <!-- Best Seller Awal -->
+    <section id="best-sellers" class="py-5" style="height: 100%; width: 100vw; background-color: #201E1F;">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4" style="color: white;" data-aos="fade-up">━ Best Seller ━</h2>
+            <p style="color: white;" class="text-center fs-5 mb-5" data-aos="fade-up">Temukan pilihan kopi terbaik kami yang telah menjadi favorit para pelanggan. Setiap minuman dalam menu Best Seller kami dibuat dengan bahan berkualitas tinggi dan penuh cinta, memastikan pengalaman kopi yang tak tertandingi.</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img src="assets/Frame 17.png" class="card-img-top" alt="Best Seller 2">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 text-white p-3 overlay-hover">
+                                <h5 class="card-title">Latte</h5>
+                                <p class="card-text">Smooth espresso mixed with lots of steamed milk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img src="assets/Frame 21.png" class="card-img-top" alt="Best Seller 4">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 text-white p-3 overlay-hover">
+                                <h5 class="card-title">Mocha</h5>
+                                <p class="card-text">Espresso combined with chocolate and steamed milk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img src="assets/Frame 22.png" class="card-img-top" alt="Best Seller 6">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 text-white p-3 overlay-hover">
+                                <h5 class="card-title">Cappuccino</h5>
+                                <p class="card-text">Espresso with steamed milk and frothy foam on top.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Best Seller Akhir -->
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-4">Testimonials</h2>
+        </div>
         <div class="row">
-           
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4" data-aos="zoom-in" data-aos-duration="1500">
-                <div class="card border-0">
-                    <div class="position-relative">
-                        <img src="assets/Frame 17.png" class="card-img-top" alt="Best Seller 2">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 text-white p-3 overlay-hover">
-                            <h5 class="card-title">Latte</h5>
-                            <p class="card-text">Smooth espresso mixed with lots of steamed milk.</p>
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+                <div class="p-4 bg-white h-100 shadow-sm rounded position-relative">
+                    <p>Kafe ini punya vibes yang keren, bikin betah lama-lama. Pilihan makanannya juga variatif dan rasanya enak.</p>
+                    <div class="d-flex align-items-center mt-4 pt-2 border-top">
+                        <img class="rounded-circle me-3" src="assets/profile.jpg" alt="Ben Johnson" style="width: 40px; height: 40px;">
+                        <div>
+                            <h5 class=" mb-1">Ben Johnson</h5>
+                            <p class="mb-0">⭐⭐⭐⭐⭐</p>
                         </div>
                     </div>
                 </div>
             </div>
-           
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4" data-aos="zoom-in" data-aos-duration="1500">
-                <div class="card border-0">
-                    <div class="position-relative">
-                        <img src="assets/Frame 21.png" class="card-img-top" alt="Best Seller 4">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 text-white p-3 overlay-hover">
-                            <h5 class="card-title">Mocha</h5>
-                            <p class="card-text">Espresso combined with chocolate and steamed milk.</p>
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+                <div class="p-4 bg-white h-100 shadow-sm rounded position-relative">
+                    <p>Tempatnya asik, cocok buat nongkrong bareng teman. Kopinya enak dan suasananya tenang. Recommended!</p>
+                    <div class="d-flex align-items-center mt-4 pt-2 border-top">
+                        <img class="rounded-circle me-3" src="assets/profile3.jpg" alt="Carl Kent" style="width: 40px; height: 40px;">
+                        <div>
+                            <h5 class=" mb-1">Carl Kent</h5>
+                            <p class="mb-0">⭐⭐⭐⭐⭐</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4"data-aos="zoom-in" data-aos-duration="1500">
-                <div class="card border-0">
-                    <div class="position-relative">
-                        <img src="assets/Frame 22.png" class="card-img-top" alt="Best Seller 6">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 text-white p-3 overlay-hover">
-                            <h5 class="card-title">Cappuccino</h5>
-                            <p class="card-text">Espresso with steamed milk and frothy foam on top.</p>
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+                <div class="p-4 bg-white h-100 shadow-sm rounded position-relative">
+                    <p>Paling suka sama interiornya yang minimalis dan nyaman. Kopinya juara, baristanya ramah banget!</p>
+                    <div class="d-flex align-items-center mt-4 pt-2 border-top">
+                        <img class="rounded-circle me-3" src="assets/profile2.jpg" alt="Emily Clark" style="width: 40px; height: 40px;">
+                        <div>
+                            <h5 class=" mb-1">Emily Clark</h5>
+                            <p class="mb-0">⭐⭐⭐⭐⭐</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- Best Seller Akhir -->
 
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h2 class="display-4">Testimonials</h2>
-    </div>
-    <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
-            <div class="p-4 bg-white h-100 shadow-sm rounded position-relative">
-                <p>Kafe ini punya vibes yang keren, bikin betah lama-lama. Pilihan makanannya juga variatif dan rasanya enak.</p>
-                <div class="d-flex align-items-center mt-4 pt-2 border-top">
-                    <img class="rounded-circle me-3" src="assets/profile.jpg" alt="Ben Johnson" style="width: 40px; height: 40px;">
-                    <div>
-                        <h5 class=" mb-1">Ben Johnson</h5>
-                        <p class="mb-0">⭐⭐⭐⭐⭐</p>
-                    </div>
-                </div>
-            </div>
+    <footer class="py-5" style="background-color: rgb(251, 253, 255);">
+        <div class="container text-center">
+           <a href="#home" class="text-decoration-none"><p class="display-6 mb-5  text-dark">CoffeeZone</p></a> 
+            <small class="text-dark ">&copy; Copyright by Astera Development. all rights reserved.</small>
         </div>
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
-            <div class="p-4 bg-white h-100 shadow-sm rounded position-relative">
-                <p>Tempatnya asik, cocok buat nongkrong bareng teman. Kopinya enak dan suasananya tenang. Recommended!</p>
-                <div class="d-flex align-items-center mt-4 pt-2 border-top">
-                    <img class="rounded-circle me-3" src="assets/profile3.jpg" alt="Carl Kent" style="width: 40px; height: 40px;">
-                    <div>
-                        <h5 class=" mb-1">Carl Kent</h5>
-                        <p class="mb-0">⭐⭐⭐⭐⭐</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
-            <div class="p-4 bg-white h-100 shadow-sm rounded position-relative">
-                <p>Paling suka sama interiornya yang minimalis dan nyaman. Kopinya juara, baristanya ramah banget!</p>
-                <div class="d-flex align-items-center mt-4 pt-2 border-top">
-                    <img class="rounded-circle me-3" src="assets/profile2.jpg" alt="Emily Clark" style="width: 40px; height: 40px;">
-                    <div>
-                        <h5 class=" mb-1">Emily Clark</h5>
-                        <p class="mb-0">⭐⭐⭐⭐⭐</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer class="py-5" style="background-color: rgb(251, 253, 255);">
-    <div class="container text-center">
-       <a href="#home" class="text-decoration-none"><p class="display-6 mb-5  text-dark">CoffeeZone</p></a> 
-        <small class="text-dark ">&copy; Copyright by Astera Development. all rights reserved.</small>
-    </div>
-</footer>
+    </footer>
 
     <!-- Bootstrap Javascript -->
     <script src="js/bootstrap.js"></script>
@@ -323,10 +361,11 @@
     <!-- AOS JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    <script>
-        AOS.init();
 
-        // Close navbar on link click (for mobile)
+<script>
+    AOS.init();
+
+    // Close navbar on link click (for mobile)
     document.addEventListener('DOMContentLoaded', function() {
         const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -339,8 +378,17 @@
             });
         });
     });
- 
-    </script>
+
+    // Show preloader and hide scroll
+    document.body.classList.add('no-scroll');
+
+    // Remove preloader and enable scroll after 4 seconds
+    setTimeout(function () {
+        document.getElementById('preloader').classList.add('loaded');
+        document.body.classList.remove('no-scroll');
+    }, 2000);
+
+</script>
 
   
 </body>
