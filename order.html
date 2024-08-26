@@ -16,6 +16,29 @@
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
         }
+
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .navbar-nav .nav-item {
+                margin: 0.5rem 0;
+            }
+
+            .navbar-toggler {
+                border-color: transparent;
+            }
+
+            .card-img-overlay {
+                opacity: 100;
+            }
+        }
         
 
         .order-header {
@@ -216,33 +239,7 @@
             visibility: hidden;
         }
 
-        .navbar {
-            transition: background-color 0.3s, box-shadow 0.3s;
-
-        }
-
-        .navbar.scrolled {
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 992px) {
-            .navbar-nav {
-                text-align: center;
-
-            }
-
-            .navbar-nav .nav-item {
-                margin: 0.5rem 0;
-            }
-
-            .navbar-toggler {
-                border-color: transparent;
-            }
-            .card-img-overlay {
-        opacity: 100;
-    }
-    
+        
     </style>
 </head>
 
