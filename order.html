@@ -12,13 +12,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+
+        body.no-scroll {
+    overflow: hidden;
+}
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
         }
-        body.no-scroll {
-    overflow: hidden;
-}
 
         .navbar.scrolled {
             background-color: rgba(255, 255, 255, 0.9);
@@ -42,6 +43,7 @@
                 opacity: 100;
             }
         }
+        
 
         .order-header {
             background-color: #343a40;
@@ -145,6 +147,7 @@
         .order-section {
             margin-bottom: 4rem;
         }
+        
 
         .order-section h2 {
             font-size: 2rem;
@@ -189,6 +192,8 @@
             border-radius: 8px;
         }
 
+        
+
         /* Make images responsive */
         .order-item img {
             max-width: 100px;
@@ -205,9 +210,8 @@
                 max-height: 80px;
             }
         }
-
-        /* Preloader Styles */
-        #preloader {
+                /* Preloader Styles */
+                #preloader {
             position: fixed;
             top: 0;
             left: 0;
@@ -229,7 +233,7 @@
         }
 
         .preloader-img {
-            width: 100px;
+            width: 100px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
             height: auto;
         }
 
@@ -238,16 +242,18 @@
             opacity: 0;
             visibility: hidden;
         }
+
+        
     </style>
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="preloader-inner">
-            <img src="assets/143.gif" alt="Loading..." class="preloader-img">
+        <!-- Preloader -->
+        <div id="preloader">
+            <div id="preloader-inner">
+                <img src="assets/143.gif" alt="Loading..." class="preloader-img">
+            </div>
         </div>
-    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
@@ -287,7 +293,7 @@
 
     <!-- Order Header -->
     <section class="order-header" id="home" style="background-image: url('assets/bgbest.png');">
-        <div class="container">
+        <div class="container" >
             <h2 class="display-4 fw-bold">Order Form</h2>
             <p>Fill out this form to order your coffee. Enter your name, phone number, and choose your drink.</p>
         </div>
@@ -322,11 +328,7 @@
                         <h5>Espresso</h5>
                         <p>$3.00 - A strong, concentrated coffee served in small shots.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -334,11 +336,7 @@
                         <h5>Latte</h5>
                         <p>$4.50 - Smooth espresso mixed with lots of steamed milk.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -346,11 +344,7 @@
                         <h5>Americano</h5>
                         <p>$3.50 - Espresso diluted with hot water for a milder taste.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -358,11 +352,7 @@
                         <h5>Mocha</h5>
                         <p>$4.75 - Espresso combined with chocolate and steamed milk.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -370,11 +360,7 @@
                         <h5>Flat White</h5>
                         <p>$4.25 - Strong espresso with smooth, steamed milk and no foam.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -382,11 +368,7 @@
                         <h5>Cappuccino</h5>
                         <p>$4.00 - Espresso with steamed milk and frothy foam on top.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <!-- Non-Coffee Items -->
@@ -395,11 +377,7 @@
                         <h5>Hot Chocolate</h5>
                         <p>$4.00 - Rich and creamy hot chocolate topped with whipped cream.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -407,11 +385,7 @@
                         <h5>Tea</h5>
                         <p>$3.00 - A selection of fine teas brewed to perfection.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -419,11 +393,7 @@
                         <h5>Iced Tea</h5>
                         <p>$3.50 - Refreshing iced tea with a hint of lemon.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -431,11 +401,7 @@
                         <h5>Smoothie</h5>
                         <p>$5.00 - A blend of fresh fruits and yogurt.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <!-- Snacks -->
@@ -444,11 +410,7 @@
                         <h5>Croissant</h5>
                         <p>$2.50 - Buttery, flaky pastry that melts in your mouth.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -456,11 +418,7 @@
                         <h5>Muffin</h5>
                         <p>$2.00 - Delicious muffin with a variety of flavors.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -468,11 +426,7 @@
                         <h5>Bagel</h5>
                         <p>$2.75 - Chewy and satisfying, perfect with cream cheese.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
 
                 <div class="order-item">
@@ -480,25 +434,24 @@
                         <h5>Brownie</h5>
                         <p>$3.00 - Rich chocolate brownie with a gooey center.</p>
                     </div>
-                    <div class="input-group ms-auto" style="width: 140px;">
-                        <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                        <input type="number" class="form-control text-center quantity" value="0" min="0">
-                        <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                    </div>
+                    <input type="number" class="form-control ms-auto quantity" style="width: 70px;" value="1" min="0">
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">Place Order</button>
+
+            <button type="submit" class="btn btn-primary mt-3" type="reset">Place Order</button>
         </form>
     </section>
+
+
 
     <!-- Footer -->
     <footer class="py-5" style="background-color: rgb(251, 253, 255);">
         <div class="container text-center">
             <a href="#home" class="text-decoration-none">
-                <p class="display-4 mb-5 text-dark">CoffeeZone</p>
+                <p class="display-4 mb-5  text-dark">CoffeeZone</p>
             </a>
-            <small class="text-dark">&copy; Copyright by Astera Development. All rights reserved.</small>
+            <small class="text-dark">&copy; Copyright by Astera Development. all rights reserved.</small>
         </div>
     </footer>
 
@@ -507,31 +460,30 @@
 
     <!-- Popper Javascript -->
     <script src="js/popper.min.js"></script>
-
     <!-- AOS JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         AOS.init();
-
+    
         // Close navbar on link click (for mobile)
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('.navbar-collapse');
-
-            document.querySelectorAll('.nav-link').forEach(function (link) {
-                link.addEventListener('click', function () {
+    
+            document.querySelectorAll('.nav-link').forEach(function(link) {
+                link.addEventListener('click', function() {
                     if (navbarToggler && navbarCollapse.classList.contains('show')) {
                         navbarToggler.click();
                     }
                 });
             });
         });
-
+    
         // Show preloader and hide scroll
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('no-scroll');
-
+    
             // Remove preloader and enable scroll after 2 seconds
             setTimeout(function () {
                 const preloader = document.getElementById('preloader');
@@ -541,28 +493,9 @@
                 document.body.classList.remove('no-scroll');
             }, 1000);
         });
-
-        // Handle minus button click
-        document.querySelectorAll('.minus-btn').forEach(function (button) {
-            button.addEventListener('click', function () {
-                let input = this.nextElementSibling;
-                let value = parseInt(input.value, 10);
-
-                if (value > 0) {
-                    input.value = value - 1;
-                }
-            });
-        });
-
-        // Handle plus button click
-        document.querySelectorAll('.plus-btn').forEach(function (button) {
-            button.addEventListener('click', function () {
-                let input = this.previousElementSibling;
-                let value = parseInt(input.value, 10);
-                input.value = value + 1;
-            });
-        });
     </script>
+    
+
 </body>
 
 </html>
