@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
@@ -112,7 +111,7 @@
             border-radius: 8px;
         }
 
-        /* Make images responsive */
+
         .menu-item img {
             max-width: 100px;
             max-height: 100px;
@@ -121,7 +120,7 @@
             object-fit: cover;
         }
 
-        /* Ensure the images take full width on smaller screens */
+    
         @media (max-width: 576px) {
             .menu-item img {
                 max-width: 80px;
@@ -167,7 +166,7 @@
         }
 
         .preloader-img {
-            width: 100px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+            width: 100px; 
             height: auto;
         }
 
@@ -192,7 +191,7 @@
             <!-- Logo -->
             <a class="navbar-brand" href="#">CoffeeZone</a>
 
-            <!-- Toggler/collapsible Button for mobile view -->
+            <!-- Toggler Button for mobile view -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -424,7 +423,6 @@
     <script>
         AOS.init();
     
-        // Close navbar on link click (for mobile)
         document.addEventListener('DOMContentLoaded', function() {
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -438,7 +436,6 @@
             });
         });
     
-        // Show preloader and hide scroll
         document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('no-scroll');
     
